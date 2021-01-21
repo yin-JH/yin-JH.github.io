@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: yin-JH.github.io
 date_format: "ordinal"
 title: yin's blog
-subtitle: "公众号：闷骚的程序员"
+subtitle: "影的个人博客"
 description: "影的个人博客"
 keywords: yin, blog
 timezone: Asia/Shanghai
