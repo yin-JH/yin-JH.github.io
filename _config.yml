@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: yin-JH.github.io
+url: https://yin-JH.github.io
 date_format: "ordinal"
 title: yin's blog
 subtitle: "影的个人博客"
