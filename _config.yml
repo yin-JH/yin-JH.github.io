@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: yin-JH.github.io
+url: localhost:8080
 date_format: "ordinal"
 title: yin's blog
 subtitle: "影的个人博客"
@@ -120,7 +120,7 @@ disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
+    owner: yin-JH
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
