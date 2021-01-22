@@ -1,6 +1,6 @@
 ---
 layout post
-title 关于Spring Boot项目的打包以及项目部署到服务器
+title 关于Spring Boot项目打包及部署
 categories maven idea
 keywords jar maven
 ---
