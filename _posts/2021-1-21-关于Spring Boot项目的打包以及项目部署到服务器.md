@@ -13,7 +13,7 @@ keywords: jar, maven
 
 2. 在idea的右侧有一栏maven栏，点击打开
 
-   ![](\images\posts\idea\maven打包jar-1.jpg)
+   ![image](\images\posts\idea\maven打包jar-1.jpg)
 
 3. 点开之后，在lifecycle一栏中先清理一下
 
