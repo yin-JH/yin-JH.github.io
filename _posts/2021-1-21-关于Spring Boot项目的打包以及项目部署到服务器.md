@@ -17,23 +17,23 @@ keywords: jar, maven
 
 3. 点开之后，在lifecycle一栏中先清理一下
 
-   ![](\images\posts\idea\maven打包jar-2.jpg)
+   ![image](\images\posts\idea\maven打包jar-2.jpg)
 
 4. 注意，清理时一定要看到build success才算清理成功
 
-   ![](\images\posts\idea\maven打包jar-3.jpg)
+   ![image](\images\posts\idea\maven打包jar-3.jpg)
 
 5. 清理成功，开始install，注意，install完毕后一定也要看到build success才算成功
 
-   ![](\images\posts\idea\maven打包jar-4.jpg)
+   ![image](\images\posts\idea\maven打包jar-4.jpg)
 
-   ![](\images\posts\idea\maven打包jar-5.jpg)
+   ![image](\images\posts\idea\maven打包jar-5.jpg)
 
 6. 接下来就前往src/target目录下面找到刚才打包的jar包，传到云服务器上，部署就成功了
 
-   ![](\images\posts\idea\maven打包jar-6.jpg)
+   ![image](\images\posts\idea\maven打包jar-6.jpg)
 
-   ![](\博客记录\images\posts\idea\maven打包jar-7.jpg)
+   ![image](\博客记录\images\posts\idea\maven打包jar-7.jpg)
 
 ### 总结
 
