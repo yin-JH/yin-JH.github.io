@@ -1,8 +1,10 @@
 ---
-layout post
-title 关于Spring Boot项目打包及部署
-categories maven idea
-keywords jar maven
+layout: post
+title: 关于Spring Boot项目打包及部署
+categories: maven idea
+description: 将项目打包，部署到服务器上的简单流程
+keywords: jar maven
+
 ---
 
 ### maven打包的方式和部署到服务器的方式
