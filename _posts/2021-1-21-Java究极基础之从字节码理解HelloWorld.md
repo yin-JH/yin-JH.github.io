@@ -17,7 +17,7 @@ keywords: Java_SE
 
 3. 和操作系统的关系
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-1.jpg)
+   ![image](\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-1.jpg)
 
    - C、C++直接和操作系统交互，有指针的概念，并且需要自己手动释放内存
    - Java和JVM（Java Vitural Machine）打交道，通过JVM和操作系统交互，没有指针、释放内存的概念
@@ -44,11 +44,11 @@ public class Hello {
    2. 类加载器将磁盘上的.class文件加载到JVM的方法区内存中
    3. JVM找到加载的主类，并且找到主类中的main方法开始执行
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-2.jpg)
+   ![image](\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-2.jpg)
 
 3. 类加载详细过程
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-5.jpg)
+   ![image](\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-5.jpg)
 
    - 加载：类加载器将class文件加载进入JVM
    - 验证：JVM对加载进来的class文件进行验证
@@ -78,7 +78,7 @@ Hello hello = new Hello();其实是有2部分组成，从“=”处将这个过�
 2. 在堆内存中开辟一个对象的空间，然后将Hello的有关信息，如实例变量，实例方法等从方法区内存中加载到堆内存中
 3. 将栈内存中的引用指向堆内存中的对象
 
-![image](D:\个人主页项目\博客记录\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-3.jpg)
+![image](\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-3.jpg)
 
 
 
@@ -92,7 +92,7 @@ Hello hello = new Hello();其实是有2部分组成，从“=”处将这个过�
 
      其中包含了对象的锁信息，32位的JVM和64位的JVM中mark word的长度是不同的，32位JVM中是32位，64位JVM中是64位，下面根据图来讲解（图中描绘的是32位的JVM）
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-4.jpg)
+     ![image](\images\posts\Java SE\2021-1-21-JavaCore从字节码认识HelloWorld-4.jpg)
 
      首先我们关注最后两位，最后两位的00、01、10、11代表了不同的锁状态
 
