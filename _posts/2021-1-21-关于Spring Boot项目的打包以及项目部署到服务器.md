@@ -33,7 +33,7 @@ keywords: jar, maven
 
    ![image](\images\posts\idea\maven打包jar-6.jpg)
 
-   ![image](\博客记录\images\posts\idea\maven打包jar-7.jpg)
+   ![image](\images\posts\idea\maven打包jar-7.jpg)
 
 ### 总结
 
