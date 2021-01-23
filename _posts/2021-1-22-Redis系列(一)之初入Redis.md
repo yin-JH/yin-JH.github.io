@@ -26,7 +26,7 @@ Redis开始前的碎碎念：Redis作为一个非常重要的知识，几乎可�
 
 2. 数据库为了提升检索速度，采用了索引技术
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-1.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-1.jpg)
 
    - 我们假设一个场景，现在这是关系型数据库，存储的是员工编号，真实的数据在磁盘中是顺序存储的
    - 假如我们现在需要查询一个员工编号为114514的人，假如我们没有索引，那么我们就有可能是从1开始遍历，直到找到114514，这样效率极其低下；但是如果我们有了索引之后，我们就有了一个B + 树，我们就可以通过类似二分法的方式快速的得到数据存储地址块，将这个地址块读到内存中后再从中读取到真实数据的物理地址，从而快速读取数据
@@ -65,40 +65,40 @@ Redis开始前的碎碎念：Redis作为一个非常重要的知识，几乎可�
 
 1. 首先，在root目录下面建立一个soft文件夹，用于存放redis
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-2.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-2.jpg)
 
 2. 使用wget命令下载redis
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-3.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-3.jpg)
 
 3. 下载、解压完毕后进入里面，首先应该大致浏览一下README文件，然后按照README的流程来进行操作
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-4.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-4.jpg)
 
 4. 编译完成，开始启动redis
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-5.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-5.jpg)
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-6.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-6.jpg)
 
 5. 这个时候我们就已经启动了Redis了，但是这种启动方式很不方便，为了简单，我们将Redis变成一个开机自启动的服务
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-9.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-9.jpg)
 
    首先安装，并且选择安装目录
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-8.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-8.jpg)
 
    安装完毕后将刚才安装的路径添加成REDIS_HOME，添加好环境变量
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-7.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-7.jpg)
 
    完毕后到根目录下的util下进行安装，将Redis变成一个开机自启动的程序
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-10.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-10.jpg)
 
    以上是安装时候出现的各种信息内容
 
-   ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-11.jpg)
+   ![image](\images\posts\Redis\2021-1-22-Redis系列一之初识Redis-11.jpg)
 
    安装成功
