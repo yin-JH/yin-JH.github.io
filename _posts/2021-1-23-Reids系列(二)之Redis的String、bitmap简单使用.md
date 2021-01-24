@@ -10,29 +10,29 @@ keywords: Redis
 
 - 当所有的安装都完毕后我们可以启动Redis的Server
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-1.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-1.jpg)
 
 - 服务器起来了，我们还需要启动redis的客户端来向Redis的服务器发出请求
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-2.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-2.jpg)
   
   我们除了可以默认启动以外，还可以加上一些配置，我们可以查看redis提供的帮助文档，非常的详细和具体
   
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-3.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-3.jpg)
 
 ### Redis的基本结构和一些简单命令
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-4.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-4.jpg)
 
 - 在Redis的一个进程中，Redis是被分为了16个区域的，每一个区域中的内容互相不共享
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-5.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-5.jpg)
 
 ### @String讲解
 
 - 讲解String组时，我们可以先查看String的帮助文档
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-6.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-6.jpg)
 
 #### set和get
 
@@ -42,21 +42,21 @@ keywords: Redis
 
   - set key value nx：当这个key不存在时，才可以set成功
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-7.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-7.jpg)
 
   - set key value xx：当这个key存在时，才可以set成功
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-8.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-8.jpg)
 
   - set后面跟nx和xx的运用一般在于一个分布式并发系统上，如果有很多个客户端同时向redis server发起创建某个key的命令，这个时候可以在后面跟上一个nx，确保只有当key不存在的时候才创建
 
 - mget和mset就是set和get的复数操作
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-9.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-9.jpg)
 
 - mset后面如果跟上一个nx或者xx，那么一个mset就是原子的
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-10.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-10.jpg)
 
   我们可以发现，当仓库中存在k1这个key的时候，我们使用mset nx会使得创建的三个key都失败，也就是说会被回滚
 
@@ -64,7 +64,7 @@ keywords: Redis
 
 - append key “value”
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-11.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-11.jpg)
 
   我们可以看到，如果一个key没有的话，我们仍然使用append会重新创建一个key
 
@@ -72,15 +72,15 @@ keywords: Redis
 
 - getrange的使用
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-12.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-12.jpg)
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-13.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-13.jpg)
 
 - serange的使用
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-14.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-14.jpg)
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-15.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-15.jpg)
 
   我们发现，如果setrange的长度超过了后面覆盖的长度，那么会额外添加上去；如果set的长度低于后面可覆盖的长度，那么后面没有被覆盖到的会原样不变
 
@@ -88,27 +88,27 @@ keywords: Redis
 
 - 我们发现，在getrange和setrange的时候要一个一个的数，非常的麻烦，这里提出一个redis作者提供的正反向索引
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-16.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-16.jpg)
 
   我们发现，原本的getrange k1 0 8变成了getrange k1 0 -1，这就是正反向索引
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-17.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-17.jpg)
 
   在Redis中，所有的索引都有正向和反向的
 
 #### strlen与Redis的二进制安全
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-18.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-18.jpg)
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-19.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-19.jpg)
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-28.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-28.jpg)
 
 从上面两张图我们可以看到，在redis中每一个字符都被算做一个单位的长度，虽然redis的string中有的数字是可以进行加减的，但是这些数字仍然被划分成了一个一个的字符，并不是一个整体
 
 特例：
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-29.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-29.jpg)
 
 这个例子很有意思，我们存入了一个中文  ‘尹’  ，这个字符在utf-8的编码下有三个字节，虽然是一个字符，但是却被strlen认定为3，这是因为redis算长度其实算的是字节的长度，数字‘999’为什么会被算成长度3？这是因为每一个‘9’都被切分出来，放在一个字节里面；如果一个字符的长度用一个字节装不下，那么就会导致一个字符有多个字节，进而导致一个字符被算作 >1 的长度
 
@@ -116,19 +116,19 @@ keywords: Redis
 
 首先，我们重启客户端，并且在启动命令的最后面添加上命令   --raw ，这个命令可以让我们的redis在get   value的时候直接将编码转换为当前客户端的编码，我们可以看到，通过这个方式，我们一开始 set 的 尹不再是一堆的编码了，而是utf-8下被转换的中文    ‘尹’
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-30.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-30.jpg)
 
 接下来，我们改变一下客户端的编码，将之变成gbk，然后我们再次set一个尹，set完毕后我们再get k1和k2，我们发现，一开始在utf-8下面的  ‘尹’  变成了  ‘灏’  。
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-31.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-31.jpg)
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-32.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-32.jpg)
 
 然后，我们再把客户端编码改回来，然后再mget k1 k2
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-33.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-33.jpg)
 
-![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-34.jpg)
+![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-34.jpg)
 
 我们发现，得到的结果又发生了变化
 
@@ -140,7 +140,7 @@ keywords: Redis
 
 - 当我们set一个value的时候，它的type一定是string，但是它的encoding不一定
 
-  ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-20.jpg)
+  ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-20.jpg)
 
   我们仔细看一下：我们set的k1是  hello  ，这是一个string type，embstr encoding；
 
@@ -156,39 +156,39 @@ keywords: Redis
 
      - 当你set的一瞬间，redis就会自动判定你这个value的encoding
 
-       ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-21.jpg)
+       ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-21.jpg)
 
      - 每一次对这个value的操作都有可能会使得这个value的encoding发生变化，这些变化会被redis自己记录
 
-       ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-22.jpg)
+       ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-22.jpg)
 
 - string 的encoding有什么用？
 
   1. string中提供了很多关于int的操作，这些操作都要求string的encoding是‘int’
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-23.jpg)
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-23.jpg)
 
      如果这个string的encoding是int，那么就可以使用incr、incrby、decr、decrby这些数值操作命令
 
      如果这个string的encoding不是int，那么就不行
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-24.jpg)
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-24.jpg)
 
   2. 通过encoding对string的区分，可以使得redis可用性提高，更加人性化，方便用户，还可以提高效率
 
   3. 补充一个关于embstr的细节的例子：
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-25.jpg)
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-25.jpg)
 
      我们可以看到，我们对一个‘int’ encoding的string通过 incrbyfloat的方式变成了一个embstr
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-26.jpg)
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-26.jpg)
 
      这个时候我们发现，我们仍然可以通过incr来操作这个encoding为embstr的value，这是因为，embstr中也是分为数值和非数值的，redis的encoding中没有double，所以double就被划分到了embstr中
 
      但是，这种情况仅限于原本一开始是int  encoding的value，通过incrbyfloat变成embstr，如果一开始就是embstr，那么就会出现问题
 
-     ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-27.jpg)
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-27.jpg)
 
 #### setbit、bitcount、bitpos、bitop
 
@@ -196,7 +196,7 @@ keywords: Redis
 
   - 在redis中，二进制被看成是一串连续的01，我们可以直接操作二进制
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-35.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-35.jpg)
 
     我们可以看到，我们直接setbit k1 1 1，进行二进制操作，此时，我们得到的value其实是：0100 0000
 
@@ -204,7 +204,7 @@ keywords: Redis
 
     - 这里补充知识：ascii编码下的64其实就是 ‘@’
 
-      ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-36.jpg)
+      ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-36.jpg)
 
     - 关于ascii编码集和其他编码集：
 
@@ -219,17 +219,17 @@ keywords: Redis
 
       我们将先setbit k1 1 1，此时k1是：0100 0000；然后我们再 setbit k1 9 1，此时k1是：0100 0000 0100 0000。redis在解码的时候，首先读取第一个字节，发现是0bit开头，于是将之解析为ascii中的‘@’；接着再读取第二个字节，发现这个字节还是0bit开头，也就是ascii的编码，于是又一次进行解码，将之解释为ascii的‘@’
 
-      ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-37.jpg)
+      ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-37.jpg)
 
       接着我们进行setbit k1 0 1，此时k1是：1100 0000 0100 0000，如果redis在试图解码的时候，发现第一个字节的前两位都是1，于是就将这个字节和这个字节后面一个字节一起读出来，试图用客户端的编码，也就是utf-8来解码，最后得到一个乱码
 
-      ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-38.jpg)
+      ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-38.jpg)
 
       最后我们再执行一个命令：setbit k1 17 1，此时k1是：1100 0000 0100 0000 0100 0000
 
       最后我们得到的就是一个乱码和一个@，这是因为，redis首先读取第一个字节，发现第一个字节的开头两位都是1，于是将第一个字节和第二个字节都拿出来，试图用utf-8来解码，解码完成后输出；然后redis又读取第三个字节，发现这个字节的第一位bit是0，于是使用ascii来解码，最后得到‘@’
 
-      ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-39.jpg)
+      ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-39.jpg)
 
   - setbit在使用的时候要注意：
 
@@ -242,13 +242,13 @@ keywords: Redis
 
   - 首先，我们setbit一个  0100 0000 1100 0000；我们可以看到，在第一个字节里面，一共有1bit位是1；在第二个字节里面，一共有2bit位是1；在第一个字节到第二个字节里面，一共有3bit位是1，这符合结果
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-40.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-40.jpg)
 
 - bitpos详解
 
   - bitpos就是找到某个指定value的指定范围的字节中第一个出现的bit，可以找第一个1，也可以找第一个0
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-41.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-41.jpg)
 
   - 我们首先设置出一个  0100 0000    0001 0000    1000 0000
 
@@ -262,13 +262,13 @@ keywords: Redis
 
   - 执行bitpos  k1    0  -1：在k1的第一个字节到最后一个字节中找到第一个  ‘2’，返回它的二进制索引位置，因为二进制只有0和1，所以直接报错
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-42.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-42.jpg)
 
 - bitop详解
 
   - bitop就是选定两个key，将这两个key中的二进制要么进行与操作，要么进行或操作，将操作的结果放到一个指定的key中
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-44.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-44.jpg)
 
   - 我们先得到两个key
 
@@ -278,7 +278,7 @@ keywords: Redis
 
     然后我们让这k1和k2进行或操作，将得到的结果放到k3，这样，k3就是：0100 0001，转换成ascii就是‘A’
 
-    ![image](D:\个人主页项目\博客记录\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-43.jpg)
+    ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-43.jpg)
 
 
 
