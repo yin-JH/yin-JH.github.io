@@ -6,6 +6,9 @@ description: Redis的String、bitmap使用
 keywords: Redis
 ---
 
+最终的实现效果是在文件 / 文件夹上右击时，会出现菜单项「用 VSCode 打开」，点击后会启动 Visual Studio Code 打开对应的文件 / 文件夹。
+
+
 ### Redis的启动
 
 - 当所有的安装都完毕后我们可以启动Redis的Server
