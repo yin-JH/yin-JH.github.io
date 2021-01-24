@@ -6,6 +6,8 @@ description: Redis的String、bitmap使用
 keywords: Redis
 ---
 
+本篇中讲述Redis的基本命令、Redis String的详细讲解以及Redis在现实环境中的一些运用
+
 ### Redis的启动
 
 - 当所有的安装都完毕后我们可以启动Redis的Server
