@@ -6,11 +6,8 @@ description: 学习Redis的基础前沿知识
 keywords: Redis, Linux, memcached
 ---
 
-之前写过一篇 [使用 jsDelivr 免费加速 GitHub Pages 博客的静态资源](https://mazhuang.org/2020/05/01/cdn-for-github-pages/)，在那之后，又陆续想到并实施了几点利用 jsDelivr 进一步加速静态资源加载的措施，新起一篇作为记录和分享。
-
-
 Redis开始前的碎碎念：Redis作为一个非常重要的知识，几乎可以说是每一个梦想成为架构师的小白都必须摸透的缓存技术，我的Redis系列不仅仅是将以前的笔记搬运，而是重新按照当年学习的流程再次重新学习一遍，毕竟是上学期考试前学完的，为了准备期末考试草草了结Redis，搞的现在忘了很多，必须重新捡起来
-"\n\n"
+======
 
 ### 基础常识和Redis前沿知识
 
