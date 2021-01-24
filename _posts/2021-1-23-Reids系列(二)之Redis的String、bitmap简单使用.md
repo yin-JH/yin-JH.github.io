@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Reids系列(二)之Redis的String、bitmap简单使用
+title: Reids系列(二)之Redis的String、bitmap简单使用
 categories: Redis
 description: Redis的String、bitmap使用
 keywords: Redis
