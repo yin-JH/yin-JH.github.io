@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redis系列一之初识Redis、Redis的安装及Redis学习的基础知识
+title: Redis系列(一)之初识Redis、Redis的安装及Redis学习的基础知识
 categories: Redis, Linux
 description: 学习Redis的基础前沿知识
 keywords: Redis, Linux, memcached
