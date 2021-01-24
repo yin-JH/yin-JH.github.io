@@ -6,6 +6,9 @@ description: 从今天开始，从最底层了解Java,吃透Java
 keywords: Java_SE
 ---
 
+从Java基础入手，再次回顾Java的细节：认识Java和C、C++的区别；了解一个Java类是如何被加载的；认识一个对象的创建流程
+======
+
 ### Java、C、C++的区别
 
 1. 按照语言特点来分类
