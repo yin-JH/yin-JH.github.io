@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 设计模式系列之(一)单例设计模式
+title: 设计模式系列(一)之单例设计模式
 categories: Design_Pattern
 desctiption: 单例设计模式的讲解
 keywords: Design_Pattern, Singleton
