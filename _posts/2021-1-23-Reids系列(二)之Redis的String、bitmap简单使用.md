@@ -189,9 +189,15 @@ keywords: Redis
 
      这个时候我们发现，我们仍然可以通过incr来操作这个encoding为embstr的value，这是因为，embstr中也是分为数值和非数值的，redis的encoding中没有double，所以double就被划分到了embstr中
 
-     但是，这种情况仅限于原本一开始是int  encoding的value，通过incrbyfloat变成embstr，如果一开始就是embstr，那么就会出现问题
+     但是，我们需要注意，在Redis中，incr、decr、incrby、decrby这四种方法能、且仅能操作encoding ‘int’，对于embstr中的那些浮点数是不能操作的，这些只能够交给incrbyfloat这个方法来操作；
 
      ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-27.jpg)
+     
+     假设一个数一开始是0.5，我们通过incrbyfloat增加到1，这个1的encoding虽然记录的是embstr，但是仍然可以通过incr、decr等方法进行整型操作
+     
+     ![image](\images\posts\Redis\2021-1-23-Redis系列二之Redis的String、bitmap简单使用-45.jpg)
+     
+     
 
 #### setbit、bitcount、bitpos、bitop
 
