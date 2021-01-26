@@ -1,6 +1,6 @@
 ---
 post: layout
-title: Redis系列(二)之list、set、sorted set、hash的简单运用
+title: Redis系列(三)之list、set、sorted set、hash的简单运用
 categories: Redis
 description: Redis的list、set、sorted set、hash简单运用
 keywords: Redis
