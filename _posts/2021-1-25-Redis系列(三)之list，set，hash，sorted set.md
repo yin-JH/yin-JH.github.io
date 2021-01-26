@@ -6,6 +6,9 @@ description: Redis的list、set、sorted set、hash简单运用
 keywords: Redis
 ---
 
+本篇进行@list、@set、@sorted_set、@hash讲解，其中重点包括sorted_set的底层数据结构以及list的不同运用方式
+======
+
 ### @list讲解
 
 #### Redis中list的结构
