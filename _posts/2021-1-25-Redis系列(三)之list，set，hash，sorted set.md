@@ -55,7 +55,7 @@ keywords: Redis
 
   ![image](\images\posts\Redis\2021-1-25-Redis系列三之Redis的list、set、sorted set、hash-12.jpg)
 
-  假如我们订阅的list到了截至时间都没有返回. 数据的话，那么我们就会返回一个空(nil)
+  假如我们订阅的list到了截至时间都没有返回. 数据的话，那么我们就会返回一个空(nil),注：一个list最多支持10个订阅
 
   ![image](\images\posts\Redis\2021-1-25-Redis系列三之Redis的list、set、sorted set、hash-13.jpg)
 
