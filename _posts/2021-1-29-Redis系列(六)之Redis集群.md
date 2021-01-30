@@ -6,7 +6,8 @@ description: Redis的集群知识
 keywords: Redis AKF CAP
 ---
 
-本篇着重套论集群配置的一些理论及问题，顺带讨论Redis集群======
+本篇着重套论集群配置的一些理论及问题，顺带讨论Redis集群
+======
 
 ### AKF拆分原则
 
