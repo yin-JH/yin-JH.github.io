@@ -6,6 +6,9 @@ description: Redis集群搭建的细节以及Redis集群的实现原理
 keyword: Redis cluster
 ---
 
+本篇讲述redis的哨兵技术、分区技术、架构技术等
+======
+
 ### Redis配置集群
 
 #### 搭建主从复制模型
