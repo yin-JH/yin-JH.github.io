@@ -3,6 +3,8 @@
       - Java
       - Lua
       - Design Patterns
+      - JUC
+      - JVM
 
 - name: Architect Keywords
   keywords:
